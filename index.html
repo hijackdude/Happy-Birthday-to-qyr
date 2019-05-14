@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<title>20+1小钱生日快乐！</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="birthdayclock.css" type="text/css" />
+    <link rel="stylesheet" href="berry.css" type="text/css" />
+    <link rel="stylesheet" href="card.css" type="text/css" />
+    <link rel="stylesheet" href="cake.css" type="text/css" />
+    <style type="text/css">
+    
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+    
+    </style>
+</head>
+<body>
+  <div class="container">
+	<div class="st-container">
+	<!-- nav begin-->
+	  <input type="radio" name="radio-set" checked="checked" id="st-control-1">
+	  <a href="#st-panel-1">Happsy</a>
+	  <input type="radio" name="radio-set" id="st-control-2">
+	  <a href="#st-panel-2">Birthday</a>
+	  <input type="radio" name="radio-set" id="st-control-3">
+	  <a href="#st-panel-3">To</a>
+	  <input type="radio" name="radio-set" id="st-control-4">
+	  <a href="#st-panel-4">Christiana</a>
+	  <input type="radio" name="radio-set" id="st-control-5">
+	  <a href="#st-panel-5">White</a>
+	  <!--nav end content begin-->
+	  <div class="st-scroll">
+	    <section class="st-panel" id="st-panel-1">
+           <div class="st-desc" data-icon="！"></div>
+           
+           <h2></h2>
+ 		  <center> <h1 class="text-center">QYR 21 BDay Clock!!!</h1></center>
+          
+        
+        <br><br><br>
+
+      <center>  <div id="DateCountdown" data-date="2019-05-15 07:00:00" style="width: 70%;"></div>
+</center>
+        </section>
+        
+	    <section class="st-panel st-color" id="st-panel-2">
+     
+           <canvas id="myCanvas"></canvas>
+
+
+        </section>
+        
+
+	    <section class="st-panel" id="st-panel-3">
+
+
+        <div class="outer-container">
+                <h1 class="wish">- Wishing you -</h1>
+                <div class="container">
+                  <div class="arrow"></div>
+                  <div class="wheel">
+                    <div class="inner-wheel" id="wheel">
+                      <div class="section"><span class="b-day">Happy Birthday!</span></div>
+                      <div class="section"><span class="vertical joy">O</span></div>
+                      <div class="section" id="love"><span class="fa fa-heart pulse"></span></div>
+                      <div class="section"><span class="adventure">New Adventures</span></div>
+                      <div class="section"><span class="vertical fun">U</span></div>
+                      <div class="section"><span class="lots">lots of</span><span class="fa fa-birthday-cake"></span></div>
+                    </div>
+                    <div class="spin-button"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="overlay">
+                <h1>
+                   I love<br/>you berrrry<br/>much</h1>
+                <div class="cherry-container-1">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-2">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-3">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-4">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-5">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-6">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-7">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-8">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+                <div class="cherry-container-9">
+                  <div class="cherry">
+                    <div class="leaf"></div>
+                  </div>
+                </div>
+              </div>
+        </section>
+        
+
+	    <section class="st-panel st-color" id="st-panel-4">
+        
+          <div id="card">
+              <div id="card-inside">
+                <div class="wrap">
+                  <p class= "vv">钱奕如,</p>
+                  <p class="vv">生日快乐！此刻应该是5.15号吧，我猜你会熬过12点睡，嗯早点睡吧，保护好自己的身体。然后压力大或者烦躁的话可以看看我推荐的小视频，那个什么四字也可以稍微看看~生日固然一年只有一次啦，但是最重要的还是按照自己的节奏好好过日子。</p>
+                  <p class="vv">对我来讲你还是很迷人的~继续呆萌下去吧。</p>
+                  <p class="vv">你还是蛮独特的，嗯，我很傲娇地说。作为一个金牛座很多的话我都羞于表达......你懂吧？
+                  </p>
+                  <p class="vv">你的帅气小陈,</p>
+                  <p class="vv"><a class="signed">陈元恺</p>
+                    <p class="vv">P.S. 网页还是有Bug，我实在没时间debug了呀，我入职TOTAL咯。你有什么不满留着，暑假再告诉我，或许我可以帮你解决不管是网站的设计还是其他的，记得就行。还有我还是想“轻轻”地打你。</p>
+                  
+                </div>
+              </div>
+          
+              <div id="card-front">
+                <div class="wrap">
+                  <h1 class="vv">生日快乐!</h1>
+                </div>
+                <button id="open">&gt;</button>
+                <button id="close">&lt;</button>
+                <div> </div>
+              </div>
+            </div>
+        </section>
+        
+
+
+
+
+	    <section class="st-panel" id="st-panel-5">
+
+<div id="layer-0">
+  <div id="intro-text">
+    <span id="t1">第一次看见小钱是她在讲台上自我介绍印象超级深刻第一次怦然心动</span>
+    <span id="t2">哦都过去好久了但我觉得好像昨天发生的一样还是喜欢吗</span>
+    <span id="t3">上一次看见她是八个月前了下一次呢还是很想长期看见的...但是不知道该怎么表达哦我真的善于暗恋（按我的估计她看不见这些动态的话！因为只播放一次滴hhh，最后一页跟着前面的浏览播放话的。）</span>
+    <span id="t4">有更多的机会相知多好呢甚至更进一步 :)（看见了的话就当作没看见~太神奇了这些动态的话设计起来简直是我的网页的亮点！悄悄话小秘密大概就是我的天，酷。）</span>
+    <span id="t5">回到主题~ 希望利物浦和雅思不难为她，她也不为难自己</span>
+  </div>
+  <div id="start-btn">点！</div>
+</div>
+<div id="curtain">
+</div>
+<div id="container-cake" class="intro">
+  <div id="text">
+  钱奕如 <br />
+     <div class="multi" id="m1">
+    <span>快乐</span>
+    <span clasS="active">快乐</span>
+      <span>优雅</span>
+      <span>大方</span>
+      <span>动人</span>
+      <span>精致</span>
+      <span>美丽</span>
+      <span>呆萌</span> 
+    </div> 一定要 <br />
+    <div class="multi" id="m2">
+      <span class="active">18岁</span>
+      <span>21岁</span>
+      <span>22岁</span>
+      <span>23岁</span>
+      <span>24岁</span>
+      <span>25岁</span>
+      <span>26岁</span>
+      <span>27岁</span>
+      <span>28岁</span>
+      <span>29岁</span>
+      <span>30岁</span>
+      <span>31岁</span>
+      <span>32岁</span>
+      <span>33岁</span>
+      <span>34岁</span>
+      <span>35岁</span>
+      <span>99岁</span>
+      <span>100岁</span>
+      <span>101岁</span>
+      <span>110岁</span>
+    </div> 快乐！
+  </div>
+
+  <div id="cake">
+    <div id="topping"></div>
+    <div class="stack" id="s1"></div>
+    <div class="stack" id="s2"></div>
+  </div>
+  <div id="plate"></div>
+  <div id="candle">
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+  </div>
+</div>
+<div id="play"></div>
+
+	    </section>
+	  </div>
+	</div>
+  </div>
+</body>
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js"></script>
+<script type="text/javascript" src="https://preview.babylonjs.com/babylon.js"></script>
+<script type="text/javascript" src="https://cdn.babylonjs.com/loaders/babylon.objFileLoader.js"></script>
+<script src="birthdayclock.js"></script>
+<script src="ani.js"></script>
+<script src="berry.js"></script>
+<script src="card.js"></script>
+<script src="cake.js"></script>

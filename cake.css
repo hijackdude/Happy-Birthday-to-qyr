@@ -1,0 +1,391 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  transfor-style: preserve-3d;
+}
+body {
+  transform-style: preserve-3d;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height:100vh;
+  width: 100vw;
+  margin: 0;
+  background: radial-gradient(circle at 50% -10%,#50bff0 20%, #3060c0 80%);
+  overflow: hidden;
+  font-family: 'Kaushan Script', cursive;
+}
+#layer-0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index: 11;
+  transition: all 1s;
+}
+#layer-0.out {
+  opacity: 0;
+  top: -5px
+}
+#intro-text {
+  color: #fff;
+  font-size: 40px;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  height: 80px;
+  line-height: 80px;
+  width: 80vw;
+  margin: -20px 0 0 -40vw;
+  text-align: center;
+  transform: rotateZ(-5deg);
+}
+#intro-text span {
+  display:block;
+  test-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  opacity: 0;
+}
+#start-btn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 80px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  margin: -20px 0 0 -40px;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  opacity: 0;
+  transition: all 1s;
+  text-shadow: 0 2px 2px rgba(0,0,0,.5);
+  box-shadow: inset 0 2px 2px rgba(0,0,0,0.5), 0 2px 2px rgba(0,0,0,0.5);
+  cursor: default;
+}
+#start-btn.open {
+  margin-top: -25px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+#start-btn.open:hover {
+  opacity: 1;
+}
+#curtain {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background: #B92F1C;
+  background-image:
+    radial-gradient(
+      circle at 50% -50px,
+    #b92f1c 0px, #b92f1c 100px, #b92f1c 100px, #a91f0c 110px, #990f0c 112px, #b92f1c 115px);
+  background-size: 100px 70px;
+  background-position: 50% 0%;
+  z-index: 10;
+  transition: all 1s;
+}
+#curtain.open {
+  transform: translateY(-300px);
+  background-size: 100px 50px;
+  height: 200px;
+}
+#curtain::after {
+  content:'';
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+  width: 100%;
+  height: 80px;
+  background-image:
+    radial-gradient(
+      circle at 50% -50px,
+    #b92f1c 0px, #b92f1c 100px, #b92f1c 100px, #a91f0c 110px, #990f0c 112px, #b92f1c 113px, #C2A72C 115px, #C2A72C 120px, rgba(0,0,0,0.5) 120px, rgba(0,0,0,0) 130px);
+  background-size: 100px 100px;
+  background-position: 50% 100%;
+}
+#container-cake {
+  transform-style: preserve-3d;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height:100vh;
+  width: 100vw;
+  margin: 0;
+  background: radial-gradient(circle at 50% -10%,#50bff0 20%, #3060c0 80%);
+  overflow: hidden;
+  font-family: 'Kaushan Script', cursive;
+}
+#container-cake::before {
+  content:'';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.75) 100%);
+  transition: all 1s
+}
+#container-cake.intro::before {
+  opacity: 1;
+}
+#cake {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  margin: 0px 0 0 -100px;
+  width:200px;
+  height:150px;
+  background: #783508;
+  background-image:
+    linear-gradient(to right, 
+      rgba(0,0,0,0.3) 0%, 
+      rgba(255,255,255,.05) 40%, 
+      rgba(255,255,255,.05) 60%, 
+      rgba(0,0,0,0.3) 100%);
+  border-top-left-radius: 50% 30px;
+  border-top-right-radius: 50% 30px;
+  border-bottom-left-radius: 50% 30px;
+  border-bottom-right-radius: 50% 30px;
+  z-index: 2;
+}
+#cake::before {
+  
+}
+#cake::after {
+  content:'';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 200px;
+  height: 60px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+.stack {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  border-bottom: 3px solid #fff;
+  border-radius: 50%;
+}
+#topping {
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: 200px;
+  height: 60px;
+  border-radius: 50%;
+  background:#fff;
+  background-image:
+    radial-gradient(ellipse at 50% 50%,
+    rgba(0,0,0,0) 30%, rgba(0,0,0,0.4) 100%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+#topping::before {
+  content:'';
+  position:absolute;
+  width:80px;
+  height:50px;
+  background:#e5e5e5;
+  top: 8px;
+  left: 4px;
+  border-radius: 50%;
+  border-bottom-left-radius: 30% 50%;
+  z-index: -1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+#s1 {
+  top: 30px
+}
+#s2 {
+  top: 60px
+}
+#plate {
+  position: absolute;
+  width: 280px;
+  height:90px;
+  background: 
+    radial-gradient(ellipse at 50% 50%,
+      #f0f0f0 58%, #bbf 60%, #bbf 68%, #99f 70%);
+  border-radius: 50%;
+  top: 56%;
+  left: 50%;
+  margin: 80px 0 0 -140px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  border: 2px solid #f0f0f0;
+}
+#candle {
+  position:absolute;
+  width: 10px;
+  height:50px;
+  bottom: 40%;
+  left: 50%;
+  border-top-left-radius: 50% 3px;
+  border-top-right-radius: 50% 3px;
+  border-bottom-left-radius: 50% 3px;
+  border-bottom-right-radius: 50% 3px;
+  margin: 0 0 0 -5px;
+  background: #f33;
+  background-image:
+    linear-gradient(to right,
+    rgba(0,0,0,0.3) 0%, 
+    rgba(255,255,255,0.05) 40%,
+    rgba(255,255,255,0.05) 60%, 
+    rgba(0,0,0,0.3) 100%),
+    linear-gradient(to bottom,
+      rgba(0,0,0,0) 20%, rgba(0,0,0,0.25) 100%);
+  z-index: 4;
+  transition: all 60s
+}
+#candle.end {
+  height: 20px;
+}
+#candle::before {
+  content:'';
+  position: absolute;
+  top:0;left:0;
+  width: 10px;
+  height: 6px;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(255,255,0,0.5) 20%, rgba(0,0,0,0.5) 100%
+  );
+  border-radius: 50%;
+}
+.flame {
+  position: absolute;
+  border-radius: 100%;
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  top: -12px;
+  left: 50%;
+  margin-left: -3.33333333px;
+  width: 6.66666667px;
+  height: 12.5px;
+  animation: flame 2s infinite;
+}
+.flame:nth-child(2) {
+  animation: flame 1.5s infinite;
+}
+.flame:nth-child(3) {
+  animation: flame 1s infinite;
+}
+.flame:nth-child(4) {
+  animation: flame .5s infinite;
+}
+.flame:nth-child(5) {
+  animation: flame .2s infinite;
+}
+#text {
+  position:absolute;
+  left: 50%;
+  top: 13%;
+  width: 100vw;
+  text-align: center;
+  margin-left: -50vw;
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+  transform: rotateZ(-5deg)
+}
+#text em {
+  font-size: 50px;
+  font-weight: 700;
+}
+.multi {
+  display:inline-block;
+  position: relative;
+  width: 100px;
+}
+#m2 {
+  width: 60px
+}
+
+.multi span {
+  display:block;
+  position:absolute;
+  top:-30px;left:0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all .25s
+}
+.multi span.active {
+  top: -35px;
+  opacity: 1;
+}
+.multi span.over {
+  top: -38px;
+  opacity: 0;
+}
+#play {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+  cursor: pointer;
+}
+#play::before {
+  content:'';
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0.75);
+  border-width: 15px 0 15px 30px;
+  transition: all .5s
+}
+#play.pause::before {
+  width: 25px;
+  height: 30px;
+  border-color: rgba(255,255,255,0) rgba(255,255,255,0.75) rgba(255,255,255,0) rgba(255,255,255,0.75);
+  border-width: 0px 10px 0px 10px;
+  
+}
+#play.out {
+  opacity: 0;
+}
+
+@keyframes flame {
+0% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
